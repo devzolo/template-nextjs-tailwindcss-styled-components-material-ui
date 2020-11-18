@@ -1,0 +1,55 @@
+module.exports = {
+  env: {
+    browser: true,
+    es2020: true,
+    node: true,
+    jest: true,
+  },
+  extends: [
+    'plugin:react/recommended',
+    'airbnb-base',
+    'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
+    'plugin:prettier/recommended',
+    'prettier/react',
+  ],
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+  },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 11,
+    sourceType: 'module',
+  },
+  plugins: ['react', '@typescript-eslint', 'prettier'],
+  rules: {
+    'prettier/prettier': 'error',
+    camelcase: 'off',
+    'no-underscore-dangle': ['error', { allowAfterThis: true }],
+    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+    'import/extensions': ['error', 'ignorePackages', { ts: 'never', tsx: 'never' }],
+    '@typescript-eslint/no-empty-function': 'off',
+    'no-useless-constructor': 'off',
+    'no-param-reassign': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    'import/prefer-default-export': 'off',
+    '@typescript-eslint/camelcase': 'off',
+    'class-methods-use-this': 'off',
+    'no-restricted-syntax': 'off',
+    'import/no-dynamic-require': 'off',
+    'no-bitwise': 'off',
+    'no-plusplus': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {},
+    },
+  },
+};
